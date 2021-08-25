@@ -1,0 +1,49 @@
+
+{% extends "base.html" %}
+{%block content%}
+
+<h1>Prediction</h1>
+
+<div class="container mainCard">
+<div class="card" style="width: 100%;">
+	<div class = 'row'>
+		<div class = 'col-12 col-md-6' id = 'map_container'>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3169834207!2d78.267957535638!3d17.412299800247855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1623423756528!5m2!1sen!2sin" width="600" height=100% style="border:0;" allowfullscreen="" loading="lazy" class="card-img-top"></iframe></div>
+  <div class = 'col-12 col-md-6'>
+  <div class="card-body">
+  <h5 class="card-title">Hyderabad Rent Predictor</h5>
+    <p class="card-text"><h6>Predicted Rent: Rs.<span> {{ (rent_val)}}</span></h6><a href="/">Predict Another</a></p>
+  
+  <ul class="list-group list-group-flush">
+  	<li class="list-group-item"><div>Address: <span class = 'address'>{{ address }}</span></div>
+    <li class="list-group-item"><div>Property Type: {{ property_type  }}</div></li>
+ <li class="list-group-item"><div>Seller Type: {{ seller_type}}</div></li>
+
+    <li class="list-group-item"> 
+      <div>Number of Bedrooms: {{ num_beds }}</div></li>
+    <li class="list-group-item">
+      <div>Property Size: {{ prop_size }} Sqft</div></li>
+  </ul>
+
+  <div class="card-body">
+
+    <a href="https://merca-analytics.medium.com/rent-prediction-in-hyderabad-with-scikit-learn-ca8884354014" class="card-link" >Model Preparation</a>
+    <a href="https://github.com/sidk1023/real_estate_predictions/blob/master/makaan_scraper.ipynb" class="card-link" >Scraper</a>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type='text/javascript'>
+  var API_KEY = '{{API_KEY}}'
+</script>
+<script src="./static/predict.js"></script>
+
+
+
+
+
+
+
+ {% endblock %}

@@ -1,0 +1,42 @@
+.mainCard{
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 35px;
+}
+.card{
+	margin: auto;
+
+}
+
+a.nav-link{
+	padding-bottom: 5px;
+}
+
+.navbar-toggler:focus{
+	box-shadow: none;
+}
+
+.prediction{
+	border-color: rgb(118, 118, 118);
+}
+
+
+
+textarea{
+	width:100%;
+}
+
+button.searchAddress{
+	margin:auto;
+	width:100%;
+}
+input{
+	width:100%;
+}
+
+@media (max-width: 767px) {
+  /* For mobile phones: */
+  #map_container{
+  	height:300px;
+  }
+}
